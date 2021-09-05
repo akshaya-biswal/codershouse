@@ -13,7 +13,7 @@ app.use(cors(corsOption));
 
 const PORT = process.env.PORT || 5000;
 DbConnect();
-app.use(express.json());
+app.use(express.json({ limit: "8mb" }));
 app.use(router);
 
 app.get("/", (req, res) => {
