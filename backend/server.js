@@ -4,7 +4,9 @@ const app = express();
 const router = require("./routes");
 const DbConnect = require("./database");
 const cors = require("cors");
+const cookieParser = require("cookie-parser");
 
+app.use(cookieParser());
 const corsOption = {
   credentials: true,
   origin: ["http://localhost:3000"],
